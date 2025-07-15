@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vu Van Thang | Professional Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Enhanced focus support for touch devices
+      document.addEventListener('DOMContentLoaded', function() {
+        const avatar = document.querySelector('.profile-avatar');
+        const socialLinks = document.querySelectorAll('.social-links a');
+        
+        if (avatar) {
+          avatar.addEventListener('touchstart', () => {
+            avatar.classList.add('focus-visible');
+          });
+          avatar.addEventListener('touchend', () => {
+            setTimeout(() => avatar.classList.remove('focus-visible'), 1500);
+          });
+          avatar.addEventListener('focus', () => {
+            avatar.classList.add('focus-visible');
+          });
+          avatar.addEventListener('blur', () => {
+            setTimeout(() => avatar.classList.remove('focus-visible'), 1500);
+          });
+        }
+
+        // Enhanced touch feedback for social links
+        socialLinks.forEach(link => {
+          link.addEventListener('touchstart', () => {
+            link.style.transform = 'scale(0.95)';
+          });
+          
+          link.addEventListener('touchend', () => {
+            setTimeout(() => {
+              link.style.transform = '';
+            }, 150);
+          });
+        });
+
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+      });
+    </script>
+  </body>
+</html>

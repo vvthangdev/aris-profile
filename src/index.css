@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #007aff; /* Màu xanh Apple */
+  --color-secondary: #f5f5f7; /* Màu nền nhạt */
+  --color-text: #1d1d1f; /* Màu chữ chính */
+  --color-accent: #6e6e73; /* Màu phụ */
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Căn giữa ngang */
+  align-items: center; /* Căn giữa dọc */
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f5f5f7, #e5e5e7);
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #005bb5;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
