@@ -1,5 +1,5 @@
 import './styles/App.css';
-// import VuVanThangImage from '/assets/images/VuVanThang.jpg';
+import avatar from './assets/images/vuthang.jpg';
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <div className="profile-row">
         <div className="profile-avatar" tabIndex="0">
           <img
-            src="./assets/images/VuVanThang.jpg"
-            alt="Vu Van Thang's Avatar"
+            src= {avatar}
+            alt="Vu Thang's Avatar"
             className="w-full h-full object-cover"
             loading="lazy"
           />
